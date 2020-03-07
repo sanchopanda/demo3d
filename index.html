@@ -64,7 +64,7 @@
           console.log(Math.round(percentComplete, 2) + "% downloaded");
         }
       };
-
+      /*
       var onError = function() {};
 
       var manager = new THREE.LoadingManager();
@@ -93,6 +93,20 @@
         });
 
       //
+*/
+
+      var loader = new THREE.GLTFLoader();
+
+      loader.load(
+        "Horse.glb",
+        function(gltf) {
+          scene.add(gltf.scene);
+        },
+        undefined,
+        function(error) {
+          console.error(error);
+        }
+      );
 
       renderer = new THREE.WebGLRenderer();
       renderer.setPixelRatio(window.devicePixelRatio);
