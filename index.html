@@ -43,7 +43,9 @@
         1,
         2000
       );
-      camera.position.z = 450;
+      camera.position.z = 550;
+      camera.position.y = 250;
+      camera.position.x = 150;
 
       // scene
 
@@ -153,7 +155,8 @@
         side: THREE.DoubleSide
       });
       var plane = new THREE.Mesh(geometry, material);
-      plane.position.x = -150;
+      plane.position.x = -180;
+      plane.position.y = 100;
       plane.rotation.y = 1.5;
       scene.add(plane);
 
@@ -168,8 +171,8 @@
       }
 
       function animate() {
-        plane.position.x += 2.5 * Math.sin(angle);
-        plane.position.z += 2.5 * Math.cos(angle);
+        plane.position.x += 3 * Math.sin(angle);
+        plane.position.z += 3 * Math.cos(angle);
         plane.rotation.y += Math.PI / 180;
 
         //plane.rotation.y += Math.PI / 180;
